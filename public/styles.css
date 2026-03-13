@@ -192,7 +192,7 @@ h2 {
   background-size: 300% 300%;
   animation: eventGradient 5s ease infinite;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 25px rgba(255,255,255,0.4);
 }
 @keyframes eventGradient {
   0% { background-position: 0% 50%; }
