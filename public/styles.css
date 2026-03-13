@@ -180,9 +180,24 @@ h2 {
   margin: 0;
 }
 .events > a.highlight {
-  background: #e753fe;
-  background: linear-gradient(167deg,rgba(231, 83, 254, 1) 32%, rgba(94, 224, 230, 1) 100%);
-  box-shadow: 0 0 12px rgba(231, 83, 254, 0.9), 0 0 20px rgba(94, 224, 230, 0.9);
+  
+  background: linear-gradient(
+    -45deg,
+    #7c3aed,
+    #2563eb,
+    #db2777,
+    #9333ea
+  );
+
+  background-size: 300% 300%;
+  animation: eventGradient 5s ease infinite;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+@keyframes eventGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 .events > a.highlight:hover {
   color: #fff !important;
