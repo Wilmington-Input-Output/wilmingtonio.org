@@ -132,6 +132,18 @@ h2 {
     fill: #8E07F9 !important;
 }
 
+.video-container {
+  position: relative;
+  margin: 32px auto;
+  max-width: 560px;
+  width: 100%;
+}
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
 .images {
   margin-top: 128px;
   display: flex;
