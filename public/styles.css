@@ -144,6 +144,35 @@ h2 {
   height: auto;
 }
 
+.sponsors {
+  margin: 64px 0;
+}
+.sponsors > a {
+  display: block;
+  color: #fff;
+  margin-bottom: 32px;
+  text-align: center;
+  text-decoration: none;
+  padding: 16px 32px 64px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+}
+.sponsors > a > h4 {
+  font-size: 32px;
+  margin: 0;
+  text-decoration: underline;
+}
+.sponsors > a > p {
+  font-size: 16px;
+}
+.sponsors > a > button {
+  background: #fff;
+  color: #8E07F9;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
 .images {
   margin-top: 128px;
   display: flex;
@@ -258,6 +287,9 @@ h2 {
   }
   main > div:first-child {
     padding-right: 0;
+  }
+  .sponsors > a {
+    text-align: left;
   }
   .images {
     display: none;
