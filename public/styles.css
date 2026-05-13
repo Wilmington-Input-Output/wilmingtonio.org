@@ -45,6 +45,10 @@ h2 {
     margin: 32px auto;
     width: 50%;
 }
+h3 {
+  margin-top: 128px;
+  color: #fff;
+}
 .cta {
     z-index: 0;
     display: inline-flex;
@@ -101,7 +105,7 @@ h2 {
 .sm {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 32px;
   justify-content: center;
 }
 .sm > a {
@@ -145,36 +149,55 @@ h2 {
 }
 
 .sponsors {
-  margin: 64px 0;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .sponsors > a {
   display: block;
+  width: 400px;
+  max-width: 100%;
   color: #fff;
   margin-bottom: 32px;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   padding: 16px 32px 64px 16px;
   cursor: pointer;
-  border-bottom: 1px solid #fff;
+  position: relative;
+  min-height: 256px;
+  background-size: cover;
+  border: 1px solid #c583fc;
+}
+.sponsors > a .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(142, 7, 249, 0.8);
+  z-index: 1;
 }
 .sponsors > a > h4 {
-  font-size: 32px;
+  font-size: 36px;
   margin: 0;
-  text-decoration: underline;
-}
-.sponsors > a > p {
-  font-size: 16px;
+  z-index: 2;
+  position: relative;
 }
 .sponsors > a > button {
+  position: absolute;
   background: #fff;
   color: #8E07F9;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
+  z-index: 2;
+  bottom: 16px;
+  right: 16px;
 }
 
 .images {
-  margin-top: 128px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -189,9 +212,9 @@ h2 {
 
 .events {
   display: flex;
-  flex-direction: column;
-  border-left: 1px solid #B68DF0;
-  padding-left: 32px;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 32px;
 }
 .events > a {
@@ -216,6 +239,9 @@ h2 {
 .events > a:hover > button {
   background: #8E07F9;
   color: #FFF;
+}
+.events > a:hover > h3 {
+  color: #8E07F9 !important;
 }
 .events > a > * {
   margin: 0;
@@ -291,8 +317,8 @@ h2 {
   .sponsors > a {
     text-align: left;
   }
-  .images {
-    display: none;
+  .images > img {
+    max-width: 100%;
   }
   .events {
     border-left: 0;
@@ -327,4 +353,8 @@ h2 {
   .events > a {
     width: calc(100% - 34px);
   }
+}
+
+p.note {
+  color: #fff;
 }
