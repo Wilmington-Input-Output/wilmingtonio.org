@@ -358,3 +358,56 @@ h3 {
 p.note {
   color: #fff;
 }
+
+#bg-audio {
+  display: none;
+}
+.audio-toggle {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(142, 7, 249, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s linear, background 0.15s linear;
+}
+.audio-toggle:hover {
+  background: rgba(142, 7, 249, 0.85);
+}
+.audio-toggle:hover svg path {
+  fill: #F3EE03;
+}
+.audio-toggle:focus-visible {
+  outline: 3px solid #F3EE03;
+  outline-offset: 3px;
+}
+.audio-toggle:active {
+  transform: scale(0.95);
+}
+.audio-toggle svg {
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+}
+.audio-toggle svg[hidden] {
+  display: none;
+}
+.audio-toggle svg path {
+  transition: fill 0.15s linear;
+}
+@media only screen and (max-width: 700px) {
+  .audio-toggle {
+    top: 8px;
+    left: 8px;
+  }
+}
